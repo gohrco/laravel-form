@@ -1,0 +1,11 @@
+---
+name: 'Test Form'
+class: 'GenericForm'
+routeAction: 'http://localhost/testpost.php'
+fields:
+  name:
+    type: 'text'
+    readonly: false
+  password:
+    type: 'submit'
+    readonly: false

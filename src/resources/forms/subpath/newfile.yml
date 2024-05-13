@@ -1,0 +1,10 @@
+---
+name: "Test Form"
+class: 'Forms\GenericForm'
+fields:
+  name:
+    -type: "text"
+    -readonly: false
+  password:
+    -type: "password"
+    -readonly: false
