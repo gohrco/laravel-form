@@ -31,9 +31,15 @@ class ResourceForm extends BaseForm
             $attributes = $this->buildValue($attributes, $fieldName, $model);
 
             $attributes = array_merge(['name' => $fieldName], $commonAttributes, $attributes);
-            $this->fields->push(
-                FieldHandler::load($attributes, $config)
-            );
+            $result = FieldHandler::load($attributes, $config);
+
+            if (is_a($result, 'Illuminate\Support\Collection')) {
+                $this->fields = $this->fields->merge($result);
+            } else {
+                $this->fields->push(
+                    FieldHandler::load($attributes, $config)
+                );
+            }
         }
 
         return $this;

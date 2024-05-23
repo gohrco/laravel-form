@@ -9,7 +9,7 @@ class FieldHandler
 {
     private array $attributes = [];
 
-    public static function load(array $attributes, array $config): BaseField
+    public static function load(array $attributes, array $config)
     {
         return App::make(FieldHandler::class)
             ->build($attributes, $config);

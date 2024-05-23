@@ -63,6 +63,8 @@ abstract class BaseForm
             $attributes['value'] = $model->$ableValue;
         } elseif (isset($model->$fieldName)) {
             $attributes['value'] = $model->$fieldName;
+        } elseif (($attributes['type'] ?? false) && $attributes['type'] == 'tabs') {
+            $attributes['value'] = $model;
         }
 
         return $attributes;
