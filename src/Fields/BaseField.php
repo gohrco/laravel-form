@@ -43,7 +43,7 @@ class BaseField extends Component
         return $this->fieldExclusions;
     }
 
-    public function init(array $attributes, array $config): self
+    public function init(array $attributes, array $config)
     {
         $this->setConfig($config)
             ->setAttributes($attributes)
