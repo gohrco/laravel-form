@@ -17,4 +17,6 @@ jobs:
       - name: Install Composer dependencies
         run: |
           composer install
-      - uses: php-actions/phpunit@v3
+      - name: Execute Unit Testing
+        run: |
+          vendor/bin/phpunit --stop-on-failure
