@@ -19,4 +19,4 @@ jobs:
           composer install
       - name: Execute Unit Testing
         run: |
-          vendor/bin/phpunit --stop-on-failure
+          vendor/bin/phpunit tests --stop-on-failure
