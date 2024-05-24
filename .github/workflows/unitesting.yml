@@ -14,5 +14,7 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: 7.4
-      - uses: php-actions/composer@v6
+      - name: Install Composer dependencies
+        run: |
+          composer install
       - uses: php-actions/phpunit@v3
